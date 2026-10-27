@@ -8,9 +8,9 @@ const CONFIG = {
 // Galeri: ganti foto = taruh file di assets/images/ lalu samakan "src". Ganti tulisan di "caption".
 // Tambah foto = salin satu baris {src, caption}. Jika file belum ada, otomatis tampil placeholder.
 const GALLERY = [
-  { src: "assets/images/foto1.jpeg", caption: "si imut" },
-  { src: "assets/images/foto2.jpeg", caption: "when yaa" },
-  { src: "assets/images/foto3.jpeg", caption: "sorry yaa, kalo fotonya dari sorotan semua" },
+  { src: "assets/images/foto1.jpg", caption: "si imut" },
+  { src: "assets/images/foto2.jpg", caption: "when yaa" },
+  { src: "assets/images/foto3.jpg", caption: "sorry yaa, kalo fotonya dari sorotan semua" },
   
 ];
 
