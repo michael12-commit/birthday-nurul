@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- UBAH: judul tab browser -->
+  <title>Happy Birthday, Nurul Hidayah! 💛</title>
+  <meta name="description" content="Ada kejutan kecil untuk Nurul Hidayah 🎂💛">
+  <meta name="theme-color" content="#FFE98A">
+  <!-- Metadata saat tautan dibagikan. og:image harus URL absolut (isi setelah website online) -->
+  <meta property="og:title" content="Happy Birthday, Nurul Hidayah! 💛">
+  <meta property="og:description" content="Ada kejutan kecil buat kamu. Yuk dibuka! 🎁">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:image" content="https://USERNAME.github.io/NAMA-REPO/assets/images/foto1.jpg"> -->
+  <!-- Favicon emoji kue -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+  <!-- Font lucu (opsional, ada fallback bila offline) -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="decor" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- HALAMAN PEMBUKA -->
+  <section id="intro">
+    <svg class="bear" viewBox="0 0 160 160" aria-label="Beruang lucu">
+      <circle cx="38" cy="40" r="20" fill="#E9B866"/><circle cx="122" cy="40" r="20" fill="#E9B866"/>
+      <circle cx="38" cy="40" r="10" fill="#FFE3A8"/><circle cx="122" cy="40" r="10" fill="#FFE3A8"/>
+      <circle cx="80" cy="90" r="56" fill="#F2C879"/>
+      <ellipse cx="80" cy="106" rx="26" ry="20" fill="#FFF3D6"/>
+      <circle cx="60" cy="82" r="6" fill="#5B3E12"/><circle cx="100" cy="82" r="6" fill="#5B3E12"/>
+      <ellipse cx="80" cy="99" rx="8" ry="6" fill="#5B3E12"/>
+      <path d="M70 111q10 8 20 0" stroke="#5B3E12" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="45" cy="100" r="8" fill="#FFB8A0" opacity=".6"/><circle cx="115" cy="100" r="8" fill="#FFB8A0" opacity=".6"/>
+      <path d="M58 38 L80 6 L102 38Z" fill="#fff" stroke="#F5B72E" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="80" cy="6" r="5" fill="#F5B72E"/>
+    </svg>
+    <!-- UBAH: teks pembuka -->
+    <h1>hai, nurul hidayah! 💛</h1>
+    <p class="sub">kayanya ada yang dapat kejutan nii, wkwk</p>
+    <button id="openBtn" class="btn big">buka Kejutannya! 🎁</button>
+  </section>
+
+  <!-- HALAMAN UTAMA -->
+  <main id="main" class="hidden">
+    <section class="hero reveal">
+      <h1 class="title">Happy Birthday, Nurul Hidayah! 🎂</h1>
+    </section>
+
+    <!-- UBAH: teks ucapan (tiap <p> muncul bertahap) -->
+    <section>
+      <article class="card msg">
+        <p class="reveal">happy birthday, nurul hidayah! 💛</p>
+        <p class="reveal">wkwk aneh rasanya, kalo aku ngucapin disini, ya tapi mau gimana lagi keadaan kita emang ga memungkinkan, sehat selalu dan selalu semangat, semoga kamu bisa dapetin akuntasi itu.</p>
+        <p class="reveal">Semoga kamu selalu punya alasan untuk tersenyum, dikelilingi orang-orang baik, dan tidak pernah kehabisan semangat untuk mengejar hal-hal yang kamu impikan.</p>
+        <p class="reveal">tetap jadi ii yang istimewa dengan caramu sendiri, ya!</p>
+        <p class="reveal">oiya, satu hal yang perlu kamu tau<br>aku disini ga berubah, masih diri aku yang dulu, wkwk. ✨</p>
+        <p class="reveal strong">once again, happy birthday, Nurul Hidayah! 💛🎂</p>
+      </article>
+    </section>
+
+    <!-- KEJUTAN INTERAKTIF -->
+    <section class="surprises">
+      <h2 class="reveal">Kejutan Kecil 🎈</h2>
+
+      <div class="card reveal">
+        <h3>🎁 Hadiah</h3>
+        <div id="gift" class="gift" role="button" tabindex="0" aria-label="Buka hadiah">
+          <div class="gift-lid"></div><div class="gift-box"></div>
+        </div>
+        <p id="giftMsg" class="pop">surprise! semoga semua hal baik menemukan jalannya menuju kamu.</p>
+        <small class="hint">klik kotaknya</small>
+      </div>
+
+      <div class="card reveal">
+        <h3>🎂 Kue</h3>
+        <svg id="cake" viewBox="0 0 200 190" class="cake" role="button" tabindex="0" aria-label="Tiup lilin">
+          <ellipse cx="100" cy="175" rx="90" ry="10" fill="#F5B72E" opacity=".25"/>
+          <rect x="25" y="115" width="150" height="55" rx="14" fill="#FFE98A"/>
+          <rect x="40" y="75" width="120" height="48" rx="14" fill="#fff" stroke="#FFE98A" stroke-width="4"/>
+          <path d="M40 90q10 14 20 0t20 0 20 0 20 0 20 0 20 0v-8H40z" fill="#F5B72E"/>
+          <rect x="94" y="45" width="12" height="32" rx="4" fill="#FFF3D6" stroke="#F5B72E" stroke-width="2"/>
+          <ellipse id="flame" class="flame" cx="100" cy="34" rx="8" ry="13" fill="#FFB400"/>
+          <circle cx="60" cy="145" r="5" fill="#fff"/><circle cx="100" cy="150" r="5" fill="#fff"/><circle cx="140" cy="145" r="5" fill="#fff"/>
+        </svg>
+        <p id="wish" class="pop">make a wish! ✨</p>
+        <small class="hint">klik lilinnya</small>
+      </div>
+
+      <div class="card reveal">
+        <h3>💌 Surat</h3>
+        <button id="envelope" class="envelope" aria-label="Buka surat"><span>💌</span></button>
+        <!-- UBAH: isi surat -->
+        <div id="letter" class="letter">
+          <p>to ii ,</p>
+          <p>semoga tahun ini kamu membawa lebih banyak kebahagiaan, cerita indah, dan alasan untuk tersenyum. jangan pikirin apa yang ga perlu kamu pikirin yaa</p>
+          <p>you deserve beautiful things in life.</p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <button id="moreBtn" class="btn">Klik kalau mau kejutan lagi!</button>
+        <p id="moreMsg" class="more" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- GALERI: lihat script.js (GALLERY) untuk mengganti foto & caption -->
+    <section>
+      <h2 class="reveal">Galeri Kenangan 📸</h2>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <footer class="reveal">
+      <p class="foot-main">long live, specially for nurul hidayah.</p>
+      <p class="foot-small">may today be a memory that you always remember and i hope so too</p>
+    </footer>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden"><figure><img alt=""><figcaption></figcaption></figure></div>
+
+  <!-- PEMUTAR MUSIK -->
+  <div id="player" class="player hidden">
+    <span class="note">♪</span>
+    <div class="info"><b>Soulmate</b><small>Kahitna</small></div>
+    <button id="playBtn" aria-label="Putar musik">▶</button>
+  </div>
+  <div id="toast" class="toast"></div>
+  <!-- UBAH: nama file audio ada di script.js (CONFIG.audio) -->
+  <audio id="audio" preload="none" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
